@@ -1,5 +1,6 @@
 export function initCalendar() {
-    const monthCalendarElement = document.querySelector("[data-month-calendar]");
+   const monthCalendarElement = document.querySelector("[data-month-calendar]");
+   const weekCalendarElement = document.querySelector("[data-week-calendar]");
    
     document.addEventListener("view-change", 
         (event) => {
@@ -7,8 +8,13 @@ export function initCalendar() {
       
        if(selectedView === "month"){
     monthCalendarElement.style.display = "block"; 
+    weekCalendarElement.style.display = "none";
+       }else if(selectedView === "week"){
+      monthCalendarElement.style.display = "none"; 
+      weekCalendarElement.style.display = "block";
        }else{
     monthCalendarElement.style.display = "none";
+    weekCalendarElement.style.display = "none";
        }
 });
 }
