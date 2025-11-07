@@ -360,7 +360,8 @@ gap: 1rem;
     display: none;
 }
 
-/* week-calendar.css */
+
+* week-calendar.css */
 .week-calendar {
   display: flex;
   flex-direction: column;
